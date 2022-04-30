@@ -1,0 +1,26 @@
+CREATE TABLE `moviedatabase` (
+  `name` varchar(50) NOT NULL,
+  `released_date` date DEFAULT NULL,
+  `genre` varchar(20) NOT NULL,
+  `director` varchar(20) NOT NULL,
+  `mainActor` varchar(20) NOT NULL,
+  `avg_rating` float DEFAULT NULL,
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+CREATE TABLE `userdatabase` (
+  `username` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `age` int NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `rating` (
+  `moviename` varchar(50) DEFAULT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `rating` int DEFAULT NULL,
+  `comment` varchar(300) DEFAULT NULL,
+  KEY `moviename` (`moviename`),
+  CONSTRAINT `rating_ibfk_1` FOREIGN KEY (`moviename`) REFERENCES `moviedatabase` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

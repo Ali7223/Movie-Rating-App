@@ -1,0 +1,8 @@
+Hi Julien ,
+ i just remembered that i only added mysql connector Jar file, first in classpath and then i had to go to project properties 
+and from the menu list i chose deployment assembly and added it there aswell. apart from that everything was installed 
+beforehand from eclipse itself. this jar file of mysql i have inserted in this yip folder along with this note. Many thanks
+
+
+Regards 
+Team 12
